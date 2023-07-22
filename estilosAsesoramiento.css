@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Helvetica, sans-serif, Arial;
+  color: antiquewhite;
+  background-color: #004154;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 52px;
+  font-family: "Bree Serif", serif, helvetica;
+  text-align: center;
+  padding-top: 30px;
+}
+@media only screen and (max-width: 550px) {
+  h1 {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  font-size: 32px;
+  font-family: "Bree Serif", serif, helvetica;
+  margin: 30px 30px;
+  padding: 20px 20px;
+}
+@media only screen and (max-width: 550px) {
+  h2 {
+    font-size: 22px;
+  }
+}
+
+h3 {
+  font-size: 25px;
+  text-align: center;
+  padding-top: 30px;
+  font-weight: bold;
+}
+@media only screen and (max-width: 550px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
+p {
+  margin: 30px 30px;
+  padding: 20px 20px;
+}
+
+.Header {
+  width: 100%;
+  height: 20%;
+  background-color: #004154;
+}
+
+.Nav a {
+  list-style: none;
+  font-size: 20px;
+  margin: 20px 20px;
+  padding-top: 10px;
+  position: relative;
+  float: left;
+  text-decoration: none;
+  color: antiquewhite;
+}
+.Nav a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.Nav a::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: rgb(19, 102, 236);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 0.6s;
+}
+.Nav a:hover::after {
+  width: 100%;
+}
+
+.Main {
+  width: 100%;
+  height: 150%;
+  background-color: #22687d;
+}
+@media only screen and (max-width: 768px) {
+  .Main {
+    height: 120%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .Main {
+    height: 170%;
+  }
+}
+
+.Footer {
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  margin-top: 3%;
+  background-color: #004154;
+}
+.Footer .icons img {
+  margin-right: 2%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.Footer .icons img:hover {
+  transform: scale(1.5);
+}
+
+/*# sourceMappingURL=estilosAsesoramiento.css.map */

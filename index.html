@@ -2,7 +2,7 @@
 <head>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device=width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      
      <meta name="description" content="servicio de asesoramiento a emprendedores">
      <meta name="keywords" content="emprendimiento, negocio, ideas, empresas, freelance, e-commerce">
@@ -16,16 +16,16 @@
      <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="estilos.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
   <body>
-    <div class="grid-container">
+    <div class="Grid-container">
          
       <div id="Inicio">
-        <div class="nav"> 
+        <div class="Nav"> 
           <h1>Potencia tu emprendimiento</h1>
             <ul>
-             <li> <a href= "#"> Artículos </a></li>
              <li> <a href="#Contacto"> Contacto </a></li>
              <li> <a href="#Nosotros"> Nosotros </a></li>
              <li> <a href="#">Inicio </a></li>      
@@ -42,36 +42,51 @@
       <div class="Derecha">
       </div>
          
-      <div class="cuadroA">     
-        <h2>Asesoramiento</h2>   
+      <div class="CuadroA" data-aos="zoom-in"> 
+        <a href= "asesoramiento.html" target="_blank"> Asesoramiento </a>   
           <p>Personalizado e integral para tu emprendimiento</p>
       </div>
          
-      <div class="cuadroB"> 
-        <h2>E-book</h2> 
+      <div class="CuadroB" data-aos="zoom-in"> 
+        <a href= "ebook.html" target="_blank"> E-book </a>
          <p>Consejos y herramientas que te permitiran llevar tu emprendimiento al siguiente nivel</p>
       </div>    
          
-     <div class="cuadroC">
-        <h2>Descargables</h2>
+     <div class="CuadroC" data-aos="zoom-in">
+        <h3> Descargables </h3>
           <p>Planillas que te permitiran llevar un control de las finanzas de tu emprendimiento</p>
      </div>
          
-      <div id="Nosotros">
+      <div id="Nosotros" data-aos="fade-right">
         <h2> Nosotros</h2>
           <p>Somos un equipo de profesionales de administración, contabilidad y finanzas, que se unieron con el objetivo de ayudar a emprendedores a concretar sus proyectos, trabajamos con Pasión, Creatividad y Dinamismo para otorgar una atención personalizada. 
-            Brindamos diferentes herramientas que se adapten a las necesidades del cliente, sus objetivos y la etapa en la cuál se encuentren en su proyecto para generar el mayor valor posible. Asumimos los retos con compromiso, honestidad y profesionalismo.</p>
-            <button type="button"> <a href="#"> Inicio</a></button>  
+            Brindamos diferentes herramientas que se adapten a las necesidades del cliente, sus objetivos y la etapa en la cuál se encuentren en su proyecto para generar el mayor valor posible. Asumimos los retos con compromiso, honestidad y profesionalismo.</p>     
       </div>
-         
+
+      <button type="button"> <a href="#"> Inicio</a></button>  
+      
       <div id="Contacto">
-        <h3> Contacto</h3>
-          <p> <img src="img/logows.png" width="20px" height="20px"> 353-4991786 </p>              
-        <h3> Seguinos en redes 
-          <p> <img src="img/logoinstagram.jpg" width="20px" height="20px"> potencia_tu_emprendimiento</p>
-        <h3>info@tuemprendimiento.com.ar</h3>
+        <h4> Contacto</h4>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+        <br><br>
+        <input type="text" name="email" id="email" placeholder="E-mail">
+        <br><br>
+        <textarea type="text" placeholder="Escriba su mensaje" style="min-height: 200px; height: 150px; width: 250px"></textarea>
+        <br><br>
+        <input class="botons" type="submit" value="Enviar">
+        <br><br>
+          <div class= "icons">
+            <img src="img/ws.jpg" alt="icono de whatsapp" width="30px" height="30px">           
+            <img src="img/insta.jpg" alt="icono de instagram" width="30px" height="30px">
+            <img src="img/fb.jpg" alt="icono de fabecook" width="30px" height="30px">
+            <img src="img/tw.jpg" alt="icono de twitter" width="30px" height="30px">
+          </div>
       </div>
-    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
                     
   </body>
          

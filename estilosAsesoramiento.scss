@@ -1,0 +1,152 @@
+*
+{  
+    padding: 0;
+    margin: 0;
+}
+//VARIABLES DE COLORES//
+$colores:
+(   colorFondo1: #004154,
+    colorFondo2: #5e7880,
+    colorFondo3: #22687d,
+    colorTexto1: antiquewhite,
+    colorTexto2: black,
+    colorAnimacion1: rgb(19, 102, 236),
+    colorAnimacion2:rgba(0,0,0,0.50)
+);
+//VARIABLES MEDIDAS RESPONSIVE//
+$breakpoints: 
+(
+    sm: 550px,
+    md: 768px,
+    lg: 1024px
+);
+@mixin MediaQuery($medida)
+{
+    @media only screen and (max-width: map-get($breakpoints, $medida))
+    {
+        @content;
+    }
+}
+body
+{
+    font-family: Helvetica, sans-serif,Arial;
+    color: map-get($colores, colorTexto1);
+    background-color: map-get($colores , colorFondo1);  
+    font-size: 20px;
+}
+//ESTILOS TEXTO//
+h1
+{
+    font-size: 52px;
+    font-family: 'Bree Serif',serif, helvetica;
+    text-align: center;
+    padding-top: 30px;
+    @include MediaQuery(sm)
+    {
+        font-size: 32px;
+    }
+}
+h2
+{
+    font-size: 32px;
+    font-family: 'Bree Serif',serif, helvetica;
+    margin: 30px 30px;
+    padding: 20px 20px;
+    @include MediaQuery(sm)
+    {
+        font-size: 22px;
+    }  
+}
+h3
+{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: bold;
+    @include MediaQuery(sm)
+    {
+        font-size: 20px;
+    }
+}
+p
+{
+    margin: 30px 30px;
+    padding: 20px 20px;
+}
+//ESTILOS NAVBAR//
+.Header
+{
+    width: 100%;
+    height: 20%;
+    background-color: map-get($colores , colorFondo1);
+}
+.Nav a
+{
+	list-style: none;
+	font-size: 20px;
+	margin: 20px 20px;
+	padding-top: 10px;
+	position: relative;
+	float: left;
+	text-decoration: none;
+	color: map-get($colores, colorTexto1);
+	&:hover 
+    {
+		background-color: map-get($colores, colorAnimacion2);  
+    }  
+	&::after 
+    {
+		content: "";
+		height: 3px;  
+        width: 0%;
+		background: map-get($colores, colorAnimacion1);
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		transition: 0.6s;
+	}
+	&:hover 
+    {
+		&::after 
+        {
+			width: 100%;
+	    }
+    }
+}	
+//ESTILOS MAIN//
+.Main
+{
+    width: 100%;
+    height: 150%;
+    background-color: map-get($colores , colorFondo3);
+    @include MediaQuery(md)
+    {
+        height: 120%;
+    }
+    @include MediaQuery(sm)
+    {
+        height: 170%;
+    }
+}
+//ESTILOS FOOTER//
+.Footer
+{
+    width: 100%;
+    height: 15%;
+    text-align: center;
+    margin-top: 3%;
+    background-color: map-get($colores , colorFondo1);
+    .icons 
+    { 
+        img 
+        {
+            margin-right: 2%;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+                &:hover
+                {
+                    transform: scale(1.5);
+                }
+        }
+    }
+}

@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-.grid-container {
+.Grid-container {
   width: 100%;
   height: 300%;
   background-color: #004154;
@@ -13,6 +13,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 0.5fr 2fr 1.5fr 3fr 1fr;
+}
+@media only screen and (max-width: 768px) {
+  .Grid-container {
+    grid-template-rows: 0.5fr 1.5fr 1fr 1fr 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .Grid-container {
+    grid-template-rows: 0.5fr 1.8fr 1.5fr 1fr 1fr 1fr 1.7fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 h1 {
@@ -28,6 +40,17 @@ h2 {
   padding-bottom: 8%;
 }
 
+h3 {
+  font-size: 32px;
+  font-family: sans-serif, Arial, Helvetica;
+}
+
+h4 {
+  font-size: 25px;
+  color: antiquewhite;
+  line-height: 50px;
+}
+
 p {
   font-size: 20px;
   line-height: 50px;
@@ -38,8 +61,20 @@ p {
   grid-row: 1/2;
   background-color: #004154;
 }
+@media only screen and (max-width: 768px) {
+  #Inicio {
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+}
+@media only screen and (max-width: 550px) {
+  #Inicio {
+    grid-row: 1/2;
+    grid-column: 1/4;
+  }
+}
 
-.nav ul li {
+.Nav ul li {
   list-style: none;
   font-size: 20px;
   margin: 0 20px;
@@ -47,14 +82,19 @@ p {
   position: relative;
   float: right;
 }
-.nav ul li a {
+@media only screen and (max-width: 550px) {
+  .Nav ul li {
+    font-size: 15px;
+  }
+}
+.Nav ul li a {
   text-decoration: none;
   color: antiquewhite;
 }
-.nav ul li a:hover {
+.Nav ul li a:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
-.nav ul li::after {
+.Nav ul li::after {
   content: "";
   height: 3px;
   width: 0%;
@@ -64,7 +104,7 @@ p {
   bottom: 0;
   transition: 0.6s;
 }
-.nav ul li:hover::after {
+.Nav ul li:hover::after {
   width: 100%;
 }
 
@@ -74,6 +114,18 @@ p {
   background-color: #5e7880;
   border-radius: 10%;
   border: solid;
+}
+@media only screen and (max-width: 768px) {
+  .Izquierda {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .Izquierda {
+    grid-row: 3/4;
+    grid-column: 1/4;
+  }
 }
 
 .Derecha {
@@ -86,6 +138,18 @@ p {
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
+@media only screen and (max-width: 768px) {
+  .Derecha {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .Derecha {
+    grid-row: 2/3;
+    grid-column: 1/4;
+  }
+}
 
 @keyframes colores {
   0%, 100% {
@@ -95,32 +159,109 @@ p {
     filter: blur(100px);
   }
 }
-.cuadroA {
+.CuadroA {
   grid-column: 1/2;
   grid-row: 3/4;
+  border: solid 5px;
   cursor: pointer;
 }
+.CuadroA a {
+  list-style: none;
+  text-decoration: none;
+  font-size: 32px;
+  font-family: "Bree Serif", serif, helvetica;
+  color: antiquewhite;
+  padding-top: 5%;
+  padding-bottom: 8%;
+}
+@media only screen and (max-width: 768px) {
+  .CuadroA {
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .CuadroA {
+    grid-row: 4/5;
+    grid-column: 1/4;
+  }
+}
 
-.cuadroB {
+.CuadroB {
   grid-column: 2/3;
   grid-row: 3/4;
   background-color: #5e7880;
   display: inline-block;
+  border: solid 5px;
   cursor: pointer;
 }
+.CuadroB a {
+  list-style: none;
+  text-decoration: none;
+  font-size: 32px;
+  font-family: "Bree Serif", serif, helvetica;
+  color: antiquewhite;
+  padding-top: 5%;
+  padding-bottom: 8%;
+}
+@media only screen and (max-width: 768px) {
+  .CuadroB {
+    grid-row: 4/5;
+    grid-column: 1/3;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .CuadroB {
+    grid-row: 5/6;
+    grid-column: 1/4;
+  }
+}
 
-.cuadroC {
+.CuadroC {
   grid-column: 3/4;
   grid-row: 3/4;
   text-align: center;
-  cursor: pointer;
+  border: solid 5px;
+}
+.CuadroC a {
+  list-style: none;
+  text-decoration: none;
+  font-size: 32px;
+  font-family: "Bree Serif", serif, helvetica;
+  color: antiquewhite;
+  padding-top: 5%;
+  padding-bottom: 8%;
+}
+@media only screen and (max-width: 768px) {
+  .CuadroC {
+    grid-row: 5/6;
+    grid-column: 1/3;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .CuadroC {
+    grid-row: 6/7;
+    grid-column: 1/4;
+  }
 }
 
-#nosotros {
+#Nosotros {
   grid-column: 1/4;
   grid-row: 4/5;
   background-color: #22687d;
   font-size: 20px;
+}
+@media only screen and (max-width: 768px) {
+  #Nosotros {
+    grid-row: 6/7;
+    grid-column: 1/3;
+  }
+}
+@media only screen and (max-width: 550px) {
+  #Nosotros {
+    grid-row: 7/8;
+    grid-column: 1/4;
+  }
 }
 
 button {
@@ -134,7 +275,9 @@ button {
   font-size: 20px;
   cursor: pointer;
   transition: 0.5s;
-  float: right;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
 }
 button a {
   text-decoration: none;
@@ -148,48 +291,40 @@ button:hover {
   grid-column: 1/4;
   grid-row: 5/6;
   background-color: #004154;
-  line-height: 50px;
+  display: list-item;
 }
-
-h3 {
-  font-size: 20px;
-  color: antiquewhite;
-  line-height: 50px;
+#Contacto input[type=text], #Contacto textarea {
+  padding: 8px;
+  border: 1px solid;
+  border-radius: 5px;
 }
-
-@media only screen and (max-width: 550px) {
-  .grid-container {
-    grid-template-rows: 0.5fr 1.8fr 1.5fr 1fr 1fr 1fr 1.7fr 1fr;
-  }
-  #Inicio {
-    grid-row: 1/2;
-    grid-column: 1/4;
-    font-size: 10px;
-  }
-  .Derecha {
-    grid-row: 2/3;
-    grid-column: 1/4;
-  }
-  .Izquierda {
-    grid-row: 3/4;
-    grid-column: 1/4;
-  }
-  .cuadroA {
-    grid-row: 4/5;
-    grid-column: 1/4;
-  }
-  .cuadroB {
-    grid-row: 5/6;
-    grid-column: 1/4;
-  }
-  .cuadroC {
-    grid-row: 6/7;
-    grid-column: 1/4;
-  }
-  #Nosotros {
+#Contacto .botons {
+  padding: 10px 20px;
+  border: 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#Contacto .botons:hover {
+  background-color: #22687d;
+}
+#Contacto .icons {
+  margin-bottom: 20px;
+}
+#Contacto .icons img {
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+#Contacto .icons img:hover {
+  transform: scale(1.5);
+}
+@media only screen and (max-width: 768px) {
+  #Contacto {
     grid-row: 7/8;
-    grid-column: 1/4;
+    grid-column: 1/3;
   }
+}
+@media only screen and (max-width: 550px) {
   #Contacto {
     grid-row: 8/9;
     grid-column: 1/4;
